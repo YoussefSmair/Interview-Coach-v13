@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Interview Coach V4 - Contact Page Styles
+   ========================================================================== */
+
+.contact-layout,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 32px;
+    margin-top: 32px;
+    direction: ltr !important;
+}
+
+html[lang="ar"] .contact-grid .glass-card {
+    text-align: right;
+    direction: rtl;
+}
+
+html[lang="en"] .contact-grid .glass-card {
+    text-align: left;
+    direction: ltr;
+}
+
+@media (max-width: 992px) {
+    .contact-layout,
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.contact-info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.info-text h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.info-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.contact-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+}
+
+.form-group-full {
+    margin-bottom: 20px;
+}
+
+.form-group-full label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.form-group-full textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    resize: vertical;
+    min-height: 140px;
+    transition: var(--transition-fast);
+}
+
+.form-group-full textarea:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+}

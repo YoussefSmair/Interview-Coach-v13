@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Interview Coach V4 - Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-glass);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 16px 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav .nav-links {
+        flex-direction: column;
+        background: none;
+        border: none;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .nav-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 12px 20px;
+    }
+
+    .mobile-menu-btn { display: block; }
+    .header-container { padding: 0 20px; position: relative; }
+    .main-content { padding: 24px 16px; }
+    .section-title { font-size: 1.8rem; }
+    .brand-logo { min-width: auto; }
+}
+
+@media (max-width: 600px) {
+    .hero-title { font-size: 2.1rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .stats-counter-bar { flex-direction: column; gap: 20px; }
+    .glass-card { padding: 24px; }
+}

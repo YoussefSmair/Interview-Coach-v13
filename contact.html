@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interview Coach - تواصل معنا">
+    <title>Interview Coach - تواصل معنا</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Multi-File CSS Architecture -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Top Header Navigation -->
+    <header class="app-header">
+        <div class="header-container" style="direction: ltr !important;">
+            <!-- Left Side: Brand Logo + Language Button -->
+            <div class="header-left-brand-group">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/logo.png" alt="Interview Coach Logo" class="header-logo-img">
+                    <span class="logo-title">Interview Coach</span>
+                </a>
+                <button id="lang-toggle-btn" class="control-btn lang-btn" title="تغيير اللغة / Change Language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
+            
+            <!-- Right Side: Navigation Links -->
+            <div class="header-right-nav">
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> <span data-i18n="nav_home">الرئيسية</span></a></li>
+                        <li><a href="jobs.html" class="nav-item"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav_jobs">الوظائف</span></a></li>
+                        <li><a href="profile.html" class="nav-item"><i class="fa-solid fa-user-gear"></i> <span data-i18n="nav_profile">الملف الشخصي</span></a></li>
+                        <li><a href="about.html" class="nav-item"><i class="fa-solid fa-users"></i> <span data-i18n="nav_about">عن المشروع</span></a></li>
+                        <li><a href="contact.html" class="nav-item active"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="nav_contact">تواصل معنا</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main View Container -->
+    <main class="main-content" id="app-viewport">
+        <section id="view-contact" class="view-section active">
+            <div style="max-width: 1250px; margin: 0 auto;">
+                <div class="section-header" style="margin-bottom: 36px;">
+                    <div class="section-badge"><i class="fa-solid fa-paper-plane"></i> تواصل معنا</div>
+                    <h2 class="section-title">تواصل معنا</h2>
+                    <p class="section-subtitle">نحن هنا لمساعدتك والإجابة على أي استفسار أو اقتراحات لتطوير المنصة</p>
+                </div>
+
+                <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; align-items: start; direction: ltr !important;">
+                    <!-- Left Info Cards Grid -->
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div class="glass-card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(245, 158, 11, 0.12); color: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 2px;" data-i18n="contact_email_label">البريد الإلكتروني</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;">support@interviewcoach.com</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(245, 158, 11, 0.12); color: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 2px;" data-i18n="contact_phone_label">الهاتف</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;" dir="ltr">+20 100 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(245, 158, 11, 0.12); color: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 2px;" data-i18n="contact_loc_label">الموقع</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="contact_loc_val">القاهرة، مصر</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(245, 158, 11, 0.12); color: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 2px;" data-i18n="contact_hours_label">ساعات العمل</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="contact_hours_val">السبت - الخميس: 9 صباحاً - 5 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Card -->
+                    <div class="glass-card" style="padding: 40px;">
+                        <form id="contact-form" onsubmit="event.preventDefault(); alert('✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'); event.target.reset();">
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display:block; margin-bottom:8px; font-weight:600;">الاسم الكامل</label>
+                                <input type="text" required placeholder="أدخل اسمك الكامل..." style="width:100%; padding:14px 16px; background:var(--bg-primary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); color:var(--text-main); font-family:inherit; outline:none;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label style="display:block; margin-bottom:8px; font-weight:600;">البريد الإلكتروني</label>
+                                <input type="email" required placeholder="you@example.com" style="width:100%; padding:14px 16px; background:var(--bg-primary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); color:var(--text-main); font-family:inherit; outline:none;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label style="display:block; margin-bottom:8px; font-weight:600;">الرسالة أو الاستفسار</label>
+                                <textarea rows="5" required placeholder="كيف يمكننا مساعدتك؟" style="width:100%; padding:14px 16px; background:var(--bg-primary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); color:var(--text-main); font-family:inherit; outline:none; resize:vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="primary-gold-btn full-width" style="padding: 14px 28px; font-size: 1.05rem;">
+                                <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global App Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-title">Interview Coach</div>
+                <p data-i18n="footer_tagline">منصة محاكاة المقابلات الشخصية الذكية المعززة بتقنيات التقييم المؤسسي الحديثة.</p>
+            </div>
+            <div class="footer-copy">
+                <p data-i18n="footer_copyright">جميع الحقوق محفوظة © 2026 لـ Interview Coach.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts In Dependency Order -->
+    <script src="js/translations.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/data/jobs.js"></script>
+    <script src="js/data/job-question-banks/tech.js"></script>
+    <script src="js/data/job-question-banks/business.js"></script>
+    <script src="js/data/job-question-banks/creative.js"></script>
+    <script src="js/data/job-question-banks/security.js"></script>
+    <script src="js/data/job-question-banks/other.js"></script>
+    <script src="js/data/job-descriptions.js"></script>
+    <script src="js/data/questions.js"></script>
+    <script src="js/data/courses_jobs.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/exam.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

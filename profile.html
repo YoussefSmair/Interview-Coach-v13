@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interview Coach - الملف الشخصي وسجل الاختبارات">
+    <title>Interview Coach - الملف الشخصي</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Multi-File CSS Architecture -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Top Header Navigation -->
+    <header class="app-header">
+        <div class="header-container" style="direction: ltr !important;">
+            <!-- Left Side: Brand Logo + Language Button -->
+            <div class="header-left-brand-group">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/logo.png" alt="Interview Coach Logo" class="header-logo-img">
+                    <span class="logo-title">Interview Coach</span>
+                </a>
+                <button id="lang-toggle-btn" class="control-btn lang-btn" title="تغيير اللغة / Change Language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
+            
+            <!-- Right Side: Navigation Links -->
+            <div class="header-right-nav">
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> <span data-i18n="nav_home">الرئيسية</span></a></li>
+                        <li><a href="jobs.html" class="nav-item"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav_jobs">الوظائف</span></a></li>
+                        <li><a href="profile.html" class="nav-item active"><i class="fa-solid fa-user-gear"></i> <span data-i18n="nav_profile">الملف الشخصي</span></a></li>
+                        <li><a href="about.html" class="nav-item"><i class="fa-solid fa-users"></i> <span data-i18n="nav_about">عن المشروع</span></a></li>
+                        <li><a href="contact.html" class="nav-item"><i class="fa-solid fa-paper-plane"></i> <span data-i18n="nav_contact">تواصل معنا</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main View Container -->
+    <main class="main-content" id="app-viewport">
+        <section id="view-profile" class="view-section active">
+            <div class="profile-wrapper" style="max-width: 1050px; margin: 0 auto; position: relative;">
+                <!-- User Header Card -->
+                <div class="glass-card" style="padding: 32px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--gold-gradient); color: var(--bg-primary); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; box-shadow: var(--shadow-gold);">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin-bottom: 4px;" id="profile-user-name">
+                                يوسف سمير
+                            </h2>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;" id="profile-user-email">
+                                <i class="fa-solid fa-envelope" style="color: var(--primary-gold);"></i> user@example.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Bar Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 40px;" id="profile-stats-grid">
+                    <div class="glass-card" style="text-align: center; padding: 24px;">
+                        <i class="fa-solid fa-award" style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 10px;"></i>
+                        <div style="font-size: 2.2rem; font-weight: 900;" class="gold-text" id="stat-total-count">0</div>
+                        <div style="color: var(--text-muted); font-weight: 600; font-size: 0.95rem;">إجمالي المقابلات</div>
+                    </div>
+
+                    <div class="glass-card" style="text-align: center; padding: 24px;">
+                        <i class="fa-solid fa-chart-line" style="font-size: 2rem; color: #3b82f6; margin-bottom: 10px;"></i>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #3b82f6;" id="stat-avg-score">0%</div>
+                        <div style="color: var(--text-muted); font-weight: 600; font-size: 0.95rem;">متوسط الدرجات</div>
+                    </div>
+
+                    <div class="glass-card" style="text-align: center; padding: 24px;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 2rem; color: #10b981; margin-bottom: 10px;"></i>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #10b981;" id="stat-passed-count">0</div>
+                        <div style="color: var(--text-muted); font-weight: 600; font-size: 0.95rem;">المقابلات الناجحة</div>
+                    </div>
+                </div>
+
+                <!-- Attempt History Table Section -->
+                <div class="glass-card" style="padding: 32px; margin-bottom: 32px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
+                        <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-main);">
+                            <i class="fa-solid fa-clock-rotate-left" style="color: var(--primary-gold);"></i> سجل المقابلات والاختبارات
+                        </h3>
+                    </div>
+
+                    <div id="history-container">
+                        <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+                            <i class="fa-solid fa-folder-open" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
+                            <p style="font-size: 1.05rem;">لم تقم بخوض أي مقابلة بعد.</p>
+                            <a href="jobs.html" class="primary-gold-btn" style="margin-top: 16px; display: inline-flex;">ابدأ مقابلة الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global App Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-title">Interview Coach</div>
+                <p data-i18n="footer_tagline">منصة محاكاة المقابلات الشخصية الذكية المعززة بتقنيات التقييم المؤسسي الحديثة.</p>
+            </div>
+            <div class="footer-copy">
+                <p data-i18n="footer_copyright">جميع الحقوق محفوظة © 2026 لـ Interview Coach.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts In Dependency Order -->
+    <script src="js/translations.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/data/jobs.js"></script>
+    <script src="js/data/job-question-banks/tech.js"></script>
+    <script src="js/data/job-question-banks/business.js"></script>
+    <script src="js/data/job-question-banks/creative.js"></script>
+    <script src="js/data/job-question-banks/security.js"></script>
+    <script src="js/data/job-question-banks/other.js"></script>
+    <script src="js/data/job-descriptions.js"></script>
+    <script src="js/data/questions.js"></script>
+    <script src="js/data/courses_jobs.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/exam.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

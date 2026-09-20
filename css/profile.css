@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Interview Coach V4 - User Profile Styles
+   ========================================================================== */
+
+.profile-header-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 32px;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--bg-primary);
+    box-shadow: var(--shadow-gold);
+}
+
+.profile-details h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.profile-email {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.attempts-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.attempts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.attempts-table th, .attempts-table td {
+    padding: 14px 18px;
+    text-align: right;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+html[lang="en"] .attempts-table th, html[lang="en"] .attempts-table td {
+    text-align: left;
+}
+
+.profile-stats-grid,
+.history-table-container,
+.attempts-table-wrapper,
+.attempts-table {
+    direction: ltr !important;
+}
+
+.profile-stats-grid .gold-text,
+.profile-stats-grid div[class*="gold-text"],
+.profile-stats-grid div[style*="font-size: 2."],
+.attempts-table td,
+.history-table-container td {
+    font-family: var(--font-en), 'Plus Jakarta Sans', sans-serif !important;
+}
+
+html[lang="ar"] .profile-stats-grid .glass-card {
+    text-align: right;
+}
+
+html[lang="en"] .profile-stats-grid .glass-card {
+    text-align: left;
+}
+
+.attempts-table th {
+    font-weight: 800;
+    color: var(--primary-gold);
+    font-size: 0.9rem;
+    background: rgba(21, 29, 42, 0.5);
+}
+
+.attempts-table td {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}

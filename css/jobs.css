@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Interview Coach V4 - Jobs, Exam Engine & Results Styles
+   ========================================================================== */
+
+.jobs-search-bar,
+.jobs-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+    direction: ltr !important;
+}
+
+.category-filters-row {
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    direction: ltr !important;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    right: 18px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+html[lang="en"] .search-input-wrapper i {
+    right: auto;
+    left: 18px;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+html[lang="en"] .search-input-wrapper input {
+    padding: 14px 20px 14px 50px;
+}
+
+.search-input-wrapper input:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+.filter-select {
+    padding: 14px 24px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.jobs-grid,
+#jobs-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    direction: ltr !important;
+}
+
+.job-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+html[lang="ar"] .job-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="en"] .job-card {
+    direction: ltr;
+    text-align: left;
+}
+
+.job-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.job-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.job-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary-gold);
+}
+
+.job-info h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.job-meta-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.meta-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+}
+
+.job-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 18px;
+}
+
+/* Exam Card Styling */
+.exam-wrapper {
+    direction: ltr !important;
+}
+
+.choice-option {
+    transition: var(--transition-fast);
+}
+
+.choice-option:hover {
+    border-color: var(--primary-gold) !important;
+    background: rgba(245, 158, 11, 0.06) !important;
+}
+
+.choice-option.selected {
+    background: rgba(245, 158, 11, 0.12) !important;
+    border-color: var(--primary-gold) !important;
+}
